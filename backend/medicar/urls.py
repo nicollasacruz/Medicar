@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
+from rest_framework.authtoken import views
 
 try:
     from medicar.routers import router
@@ -25,6 +26,6 @@ except:
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # url(r'^api-auth/', include(views.obtain_auth_token, name='api-tokn-auth')),
     url(r'^api/', include(router.urls)),
 ]

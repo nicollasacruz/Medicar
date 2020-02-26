@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Especialidade(models.Model):
     """
-    Class para as Especialidade 
+    Class Para definir as especilidades
     """
     nome = models.CharField(max_length=100)
 
@@ -47,6 +47,9 @@ class Agenda(models.Model):
 
     def __str__(self):
         return self.dia
+
+    def agendar(self):
+        pass
 
 
 class Consuta(models.Model):

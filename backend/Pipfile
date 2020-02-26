@@ -7,6 +7,9 @@ name = "pypi"
 django = "==2.2"
 djangorestframework = "*"
 djangorestframework-expander = "*"
+coverage = "*"
+django-phonenumber-field = "*"
+phonenumbers = "*"
 
 [dev-packages]
 

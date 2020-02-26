@@ -41,14 +41,17 @@ DEFAULT_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'rest_framework.authtoken',
+    'phonenumber_field',
 ]
 
 LOCAL_APPS = [
+    'agendamento',
     'api',
 ]
 
 
-INSTALLED_APPS = LOCAL_APPS + THIRD_PARTY_APPS + DEFAULT_APPS
+INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -145,6 +148,9 @@ REST_FRAMEWORK = {
 
 }
 
+# PHONENUMBER
+
+PHONENUMBER_DEFAULT_REGION = "BR"
 
 # TIME_INPUT_FORMATS = ('%m:%s')
 # DRF_EXPANDER_EXPAND_ARG = 'expand'

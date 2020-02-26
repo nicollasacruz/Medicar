@@ -1,0 +1,5 @@
+django==2.2
+djangorestframework==3.11.0
+djangorestframework-expander==0.2.3
+django-phonenumber-field==4.0.0
+phonenumbers==8.11.4
