@@ -42,12 +42,11 @@ DEFAULT_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
-    'phonenumber_field',
+    'phonenumber_field'
 ]
 
 LOCAL_APPS = [
-    'agendamento',
-    'api',
+    'agendamento'
 ]
 
 
@@ -134,8 +133,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # DjangoRest FrameWork 
-
-
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
                'rest_framework.authentication.TokenAuthentication',
@@ -148,11 +145,7 @@ REST_FRAMEWORK = {
 
 }
 
+
 # PHONENUMBER
 
 PHONENUMBER_DEFAULT_REGION = "BR"
-
-# TIME_INPUT_FORMATS = ('%m:%s')
-# DRF_EXPANDER_EXPAND_ARG = 'expand'
-
-

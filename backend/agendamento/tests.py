@@ -2,7 +2,7 @@ from django.test import TestCase
 import unittest
 
 
-class EspecialidadeTest(unittest.TestCase):
+class EspecialidadeTest(TestCase):
     """
     Class de teste para testar a class de especialidade
     """

@@ -10,6 +10,8 @@ djangorestframework-expander = "*"
 coverage = "*"
 django-phonenumber-field = "*"
 phonenumbers = "*"
+psycopg2 = "*"
+ipython = "*"
 
 [dev-packages]
 
