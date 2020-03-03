@@ -1,4 +1,4 @@
-"""api URL Configuration
+"""medicar URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url, include
+from rest_framework.authtoken import views
+
+try:
+    from medicar.routers import router
+except:
+    warnings.warn("*** problemas de importação com os routers  ***")
+    router = DefaultRouter()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # url(r'^api-auth/', include(views.obtain_auth_token, name='api-tokn-auth')),
+    url(r'^api/', include(router.urls)),
 ]

@@ -6,6 +6,12 @@ name = "pypi"
 [packages]
 django = "==2.2"
 djangorestframework = "*"
+djangorestframework-expander = "*"
+coverage = "*"
+django-phonenumber-field = "*"
+phonenumbers = "*"
+psycopg2 = "*"
+ipython = "*"
 
 [dev-packages]
 
