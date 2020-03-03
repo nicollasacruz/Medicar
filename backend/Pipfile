@@ -12,6 +12,7 @@ django-phonenumber-field = "*"
 phonenumbers = "*"
 psycopg2 = "*"
 ipython = "*"
+django-filter = "*"
 
 [dev-packages]
 

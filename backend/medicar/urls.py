@@ -26,6 +26,6 @@ except:
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # url(r'^api-auth/', include(views.obtain_auth_token, name='api-tokn-auth')),
+    # url(r'^api-auth/', include(views.obtain_auth_token, name='api-token-auth')),
     url(r'^api/', include(router.urls)),
 ]

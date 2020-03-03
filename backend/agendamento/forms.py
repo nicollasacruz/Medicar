@@ -1,6 +1,6 @@
 from django import forms
 from agendamento.models import Agenda
-from datetime import datetime
+import datetime
 from django.contrib import messages
 
 
