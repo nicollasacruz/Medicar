@@ -48,7 +48,8 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'especialidade',
-    'medico'
+    'medico',
+    'agenda'
 ]
 
 

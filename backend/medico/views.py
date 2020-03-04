@@ -7,10 +7,6 @@ from medico.serializers import MedicoSerializer
 
 
 class MedicoFilter(filters.FilterSet):
-    # nome = filters.CharFilter()
-    # crm = filters.CharFilter()
-    # email = filters.CharFilter()
-    # telefone = filters.NumberFilter()
     especialidade = filters.ModelMultipleChoiceFilter(
         queryset=Especialidade.objects.all())
     
