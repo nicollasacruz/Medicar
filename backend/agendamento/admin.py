@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Especialidade
+# from .models import Especialidade
 from .models import Medico
 from .models import Agenda
 from .models import Horario
@@ -10,10 +10,10 @@ class HorarioAdmin(admin.ModelAdmin):
     list_display = ('horario',)
 
 
-class EspecialidadeAdmin(admin.ModelAdmin):
-    list_display = ('nome',)
-    search_fields = ['nome']
-    fields = ['nome']
+# class EspecialidadeAdmin(admin.ModelAdmin):
+#     list_display = ('nome',)
+#     search_fields = ['nome']
+#     fields = ['nome']
 
 
 class MedicoAdmin(admin.ModelAdmin):
@@ -29,6 +29,6 @@ class AgendaAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Medico, MedicoAdmin)
-admin.site.register(Especialidade, EspecialidadeAdmin)
+# admin.site.register(Especialidade, EspecialidadeAdmin)
 admin.site.register(Agenda, AgendaAdmin)
 admin.site.register(Horario)
