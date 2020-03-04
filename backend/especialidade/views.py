@@ -6,13 +6,8 @@ from especialidade.models import Especialidade
 from especialidade.serializers import EspecialidadeSerializer
 
 # Create your views here.
-class EspecialidadeViewSet(viewsets.ModelViewSet):
+class EspecialidadeViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Especialidade.objects.all()
     serializer_class = EspecialidadeSerializer
     filter_backends = (filters.DjangoFilterBackend, SearchFilter)
     search_fields = ('nome',)
-
-    def list(self, request):
-        queryset = Especialidade.objects.all()
-        serializer = EspecialidadeSerializer(queryset, many=True)
-        return super(EspecialidadeViewSet, self).list(request,)
