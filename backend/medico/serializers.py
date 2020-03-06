@@ -9,7 +9,7 @@ class MedicoSerializer(ExpanderSerializerMixin, serializers.HyperlinkedModelSeri
 
     class Meta:
         model = Medico
-        fields = '__all__'
+        fields = ('url','id','nome','crm','email','telefone', 'especialidade')
         expandable_fields = {
             'especialidade': EspecialidadeSerializer
         }

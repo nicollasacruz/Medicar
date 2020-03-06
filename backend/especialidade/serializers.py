@@ -7,5 +7,5 @@ class EspecialidadeSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Especialidade
-        fields = '__all__'
+        fields = ('url', 'id', 'nome')
         
