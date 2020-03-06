@@ -1,9 +1,11 @@
 from django import forms
 from agenda.models import Agenda
+from agenda.models import Horario
 import datetime
 
 
 class AgendaAdminForm(forms.ModelForm):
+    horario = forms.ModelMultipleChoiceField(queryset=Horario.objects.all(), required=False)
 
     class Meta:
         model = Agenda

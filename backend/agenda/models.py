@@ -16,20 +16,22 @@ class Agenda(models.Model):
     id = models.AutoField(primary_key=True)
     medico = models.ForeignKey(
         Medico,
-        verbose_name="Médico",
         on_delete=models.PROTECT,
         help_text='Selecione um médico')
     dia = models.DateField()
-    horarios = models.ManyToManyField(
-        Horario, verbose_name="horários",  help_text='Escolha os Horários')
+    horario = models.ManyToManyField(
+        Horario, help_text='Escolha os Horários')
 
-    def get_horarios(self):
-        return ", ".join([str(p) for p in self.horarios.all()])
+    def horarios(self):
+        horarios = []
+        for p in self.horario.all():
+            horarios.append(p)
+        return horarios 
 
     class Meta:
         unique_together = ('medico', 'dia')
         verbose_name = "Agenda"
         verbose_name_plural = "Agendas"
 
-    def __unicode__(self):
-        return f'medico: {self.medico}, dia: {self.dia}'
+    def __str__(self):
+        return f'{self.medico}'

@@ -10,7 +10,7 @@ class HorarioAdmin(admin.ModelAdmin):
 
 class AgendaAdmin(admin.ModelAdmin):
     form = AgendaAdminForm
-    list_display = ('medico', 'dia', 'get_horarios')
+    list_display = ['medico','dia', 'horarios']
     autocomplete_fields = ["medico"]
 
 
