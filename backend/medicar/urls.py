@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from rest_framework.authtoken import views
+from django.contrib.auth.views import LoginView
+
 
 try:
     from medicar.routers import router
@@ -26,6 +28,7 @@ except:
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # url(r'^api-auth/', include(views.obtain_auth_token, name='api-tokn-auth')),
+    url(r'^login/$', LoginView.as_view(), name='login'),
     url(r'^api/', include(router.urls)),
+    url(r'^api-token-auth/', views.obtain_auth_token)
 ]

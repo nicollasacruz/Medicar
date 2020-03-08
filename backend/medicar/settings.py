@@ -42,11 +42,15 @@ DEFAULT_APPS = [
 THIRD_PARTY_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
-    'phonenumber_field'
+    'phonenumber_field',
+    'django_filters'
 ]
 
 LOCAL_APPS = [
-    'agendamento'
+    'especialidade',
+    'medico',
+    'agenda',
+    'usuario'
 ]
 
 
@@ -135,13 +139,16 @@ STATIC_URL = '/static/'
 # DjangoRest FrameWork 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-               'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES':(
-                'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
 
 }
 
@@ -149,3 +156,5 @@ REST_FRAMEWORK = {
 # PHONENUMBER
 
 PHONENUMBER_DEFAULT_REGION = "BR"
+
+DATE_FORMAT = "%d-%m-%Y"

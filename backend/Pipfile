@@ -5,13 +5,15 @@ name = "pypi"
 
 [packages]
 django = "==2.2"
-djangorestframework = "*"
+djangorestframework = "==3.9.0"
 djangorestframework-expander = "*"
 coverage = "*"
 django-phonenumber-field = "*"
 phonenumbers = "*"
 psycopg2 = "*"
 ipython = "*"
+django-filter = "*"
+httpie = "*"
 
 [dev-packages]
 
