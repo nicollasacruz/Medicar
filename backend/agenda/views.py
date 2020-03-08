@@ -13,12 +13,15 @@ class AgendaFilter(filters.FilterSet):
     medico = filters.ModelMultipleChoiceFilter(
         queryset=Medico.objects.all())
     especialidade = filters.ModelMultipleChoiceFilter(
+        field_name="especialidade_especialidade", 
+        lookup_expr="icontains",
         queryset = Especialidade.objects.all())
+    data_inicio = filters.DateFilter(field_name="dia", lookup_expr='dia__gte')
+    data_final = filters.DateFilter(field_name="dia", lookup_expr='dia__lte')
 
     class Meta:
         model = Agenda
-        fields = ['medico', 'especialidade']
-
+        fields = ['medico', 'especialidade', 'data_inicio', 'data_final']
 
 
 class AgendaViewSet(viewsets.ReadOnlyModelViewSet):
@@ -27,16 +30,6 @@ class AgendaViewSet(viewsets.ReadOnlyModelViewSet):
     filter_backends = (filters.DjangoFilterBackend,)
     filter_class = AgendaFilter
     ordering_fields = ('dia',)
-
-    # def get(self, request, format=None):
-    #     """
-    #     Retorna todas as agendas.
-    #     """
-    #     agendas = [agenda.dia for agenda in Agenda.objects.all()]
-    #     for agenda in agendas:
-
-    #     print(agendas)
-    #     return Response(agendas)
 
     def list(self, request):
         queryset = Agenda.objects.all()
