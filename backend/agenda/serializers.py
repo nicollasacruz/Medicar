@@ -1,4 +1,4 @@
-from rest_framework import serializers
+from rest_framework import serializers, fields
 from agenda.models import Agenda
 from agenda.models import Horario
 from medico.models import Medico
@@ -28,3 +28,5 @@ class AgendaSerializer(ExpanderSerializerMixin, serializers.Serializer):
         expandable_fields = {
             'medico': MedicoSerializer
         }
+
+    

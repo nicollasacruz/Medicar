@@ -32,6 +32,7 @@ class Agenda(models.Model):
         unique_together = ('medico', 'dia')
         verbose_name = "Agenda"
         verbose_name_plural = "Agendas"
+        ordering = ['dia']
 
     def __str__(self):
         return f'{self.medico}'

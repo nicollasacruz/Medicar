@@ -5,10 +5,9 @@ from agenda.views import AgendaViewSet
 from usuario.views import UserViewSet
 
 
-
 router = routers.DefaultRouter()
+
 router.register(r'especialidades', EspecialidadeViewSet)
 router.register(r'medicos', MedicoViewSet)
 router.register(r'agendas', AgendaViewSet)
 router.register(r'usuarios', UserViewSet)
-
