@@ -41,7 +41,7 @@ DEFAULT_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
-    # 'rest_framework.authtoken',
+    'rest_framework.authtoken',
     'phonenumber_field',
     'django_filters'
 ]
@@ -49,7 +49,8 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     'especialidade',
     'medico',
-    'agenda'
+    'agenda',
+    'usuario'
 ]
 
 
@@ -137,12 +138,12 @@ STATIC_URL = '/static/'
 
 # DjangoRest FrameWork 
 REST_FRAMEWORK = {
-    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-    #     'rest_framework.authentication.TokenAuthentication',
-    # ),
-    # 'DEFAULT_PERMISSION_CLASSES':(
-    #     'rest_framework.permissions.IsAuthenticated',
-    # ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES':(
+        'rest_framework.permissions.IsAuthenticated',
+    ),
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',
     ),
