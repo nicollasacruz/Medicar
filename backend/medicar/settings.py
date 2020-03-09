@@ -50,7 +50,8 @@ LOCAL_APPS = [
     'especialidade',
     'medico',
     'agenda',
-    'usuario'
+    'usuario',
+    'consulta'
 ]
 
 
